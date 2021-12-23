@@ -18,6 +18,8 @@ Use use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 In the class we have to define the getSubscribedEvents method that returns a list of events we're interested in subscribing to.
 This is an example for this file
 
+```
+<?php
 namespace Drupal\test_events\EventSubscriber;
 
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
@@ -45,10 +47,11 @@ class TestEventSubscriber implements EventSubscriberInterface {
   }
 
 }
+```
 
 # How can we discover existing events?
 To list the "event subscribers", We can search on the base code all instances in the @Event docblock tag.
-By convention, the @Event tag is used to indicate that the thing being documented is the name of an event triggered by the event dispatcher. 
+By convention, the @Event tag is used to indicate that the thing being documented is the name of an event triggered by the event dispatcher.
 
 Another option to list the events is using Drupal Console. Drupal Console has in its commands a command to list the events.
 We can use "drupal debug:event" to get the list.

@@ -1,0 +1,6 @@
+services:
+  test_event_subscriber:
+    class: '\Drupal\test_events\EventSubscriber\TestEventSubscriber'
+    arguments: ['@logger.factory']
+    tags:
+      - { name: event_subscriber }
